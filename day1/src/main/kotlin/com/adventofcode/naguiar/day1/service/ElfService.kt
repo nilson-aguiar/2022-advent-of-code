@@ -2,6 +2,7 @@ package com.adventofcode.naguiar.day1.service
 
 import com.adventofcode.naguiar.day1.domain.Elf
 import com.adventofcode.naguiar.day1.domain.Snack
+import com.adventofcode.naguiar.readAsResourceStream
 
 class ElfService(inputPath: String) {
 
@@ -15,7 +16,7 @@ class ElfService(inputPath: String) {
 
     private fun parseElfSnacks(inputPath: String): List<Elf> {
         var currentId = 1L
-        return reader(inputPath).lineSequence()
+        return inputPath.readAsResourceStream().lineSequence()
             .mapNotNull {
                 if (it.isBlank()) {
                     currentId++
@@ -29,9 +30,5 @@ class ElfService(inputPath: String) {
                 Elf(key, items.map { Snack(it.second.toLong()) }.toList())
             }
     }
-
-    private fun reader(inputPath: String) =
-        {}::class.java.getResourceAsStream("/$inputPath")?.bufferedReader()
-            ?: throw IllegalArgumentException("Invalid Path [$inputPath]")
 
 }

@@ -11,6 +11,12 @@
 
     <name>Advent of Code 2022 - Nilson Aguiar</name>
 
+    <modules>
+        <module>utils</module>
+        <module>day1</module>
+        <module>day2</module>
+    </modules>
+
     <properties>
         <revision>1.0.0</revision>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -21,8 +27,6 @@
 
         <maven.compiler.source>19</maven.compiler.source>
         <maven.compiler.target>19</maven.compiler.target>
-
-
     </properties>
 
     <dependencies>
