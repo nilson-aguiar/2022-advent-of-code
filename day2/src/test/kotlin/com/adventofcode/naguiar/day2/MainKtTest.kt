@@ -1,5 +1,8 @@
 package com.adventofcode.naguiar.day2
 
+import com.adventofcode.naguiar.day2.domain.PlayerMove
+import com.adventofcode.naguiar.day2.service.GameScoreCalculator
+import com.adventofcode.naguiar.day2.strategy.StaticStrategyMove
 import org.assertj.core.api.Assertions.assertThat
 import org.junit.Test
 
