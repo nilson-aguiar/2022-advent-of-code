@@ -8,30 +8,13 @@ data class Round(val move1: PlayerMove, val move2: PlayerMove) {
     }
 
     private fun PlayerMove.scoreAgainst(move: PlayerMove): Int {
-        if (this == move) return this.score + DRAW
+        if (this == move)
+            return this.score + DRAW
 
-        return when (this) {
-            PlayerMove.ROCK -> {
-                when (move) {
-                    PlayerMove.SCISSORS -> this.score + WIN
-                    else -> this.score
-                }
-            }
+        if (this.winAgainst() == move)
+            return this.score + WIN
 
-            PlayerMove.PAPER -> {
-                when (move) {
-                    PlayerMove.ROCK -> this.score + WIN
-                    else -> this.score
-                }
-            }
-
-            PlayerMove.SCISSORS -> {
-                when (move) {
-                    PlayerMove.PAPER -> this.score + WIN
-                    else -> this.score
-                }
-            }
-        }
+        return this.score
     }
 
     fun calculateScore() = RoundScore(

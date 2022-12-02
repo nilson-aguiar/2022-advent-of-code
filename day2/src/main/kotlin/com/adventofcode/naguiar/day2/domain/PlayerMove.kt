@@ -9,7 +9,7 @@ enum class PlayerMove(val value: String, val score: Int) {
         SCISSORS -> PAPER
     }
 
-    fun looseAgainst() = when (this) {
+    fun loseAgainst() = when (this) {
         SCISSORS -> ROCK
         ROCK -> PAPER
         PAPER -> SCISSORS

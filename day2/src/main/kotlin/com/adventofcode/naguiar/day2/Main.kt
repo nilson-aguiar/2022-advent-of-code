@@ -14,7 +14,7 @@ fun main() {
         DynamicStrategyMove(
             x = { playerMove -> playerMove.winAgainst() },
             y = { playerMove -> playerMove },
-            z = { playerMove -> playerMove.looseAgainst() }
+            z = { playerMove -> playerMove.loseAgainst() }
         )).calculateGameResult()
     )
 
