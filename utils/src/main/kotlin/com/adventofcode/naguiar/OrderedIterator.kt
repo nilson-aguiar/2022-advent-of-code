@@ -1,4 +1,4 @@
-package com.adventofcode.naguiar.day3.extension
+package com.adventofcode.naguiar
 
 class OrderedIterator<T>(private val iterator: Iterator<T>) {
 

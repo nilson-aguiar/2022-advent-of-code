@@ -1,6 +1,6 @@
 package com.adventofcode.naguiar.day3.domain
 
-import com.adventofcode.naguiar.day3.extension.OrderedIterator
+import com.adventofcode.naguiar.OrderedIterator
 
 class RuckSack(items: String) {
     private val firstCompartment: Compartment
