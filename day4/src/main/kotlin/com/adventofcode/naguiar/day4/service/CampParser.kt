@@ -2,11 +2,11 @@ package com.adventofcode.naguiar.day4.service
 
 import com.adventofcode.naguiar.day4.domain.Camp
 import com.adventofcode.naguiar.day4.domain.Elf
-import com.adventofcode.naguiar.readAsResourceStream
+import com.adventofcode.naguiar.readResourceAsStream
 
 class CampParser(private val input: String) {
 
-    fun camps(): List<Camp> = input.readAsResourceStream().lines()
+    fun camps(): List<Camp> = input.readResourceAsStream().lines()
         .map { camp ->
             camp.split(",")
         }

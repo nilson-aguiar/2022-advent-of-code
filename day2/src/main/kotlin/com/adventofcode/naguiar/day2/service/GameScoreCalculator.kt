@@ -4,13 +4,13 @@ import com.adventofcode.naguiar.day2.domain.Game
 import com.adventofcode.naguiar.day2.domain.PlayerMove
 import com.adventofcode.naguiar.day2.domain.Round
 import com.adventofcode.naguiar.day2.strategy.StrategyMove
-import com.adventofcode.naguiar.readAsResourceStream
+import com.adventofcode.naguiar.readResourceAsStream
 import kotlin.jvm.optionals.getOrNull
 
 class GameScoreCalculator(private val input: String, private val strategy: StrategyMove) {
 
     fun calculateGameResult(): Game {
-        val finalScore = input.readAsResourceStream().lines()
+        val finalScore = input.readResourceAsStream().lines()
             .parallel()
             .map {
                 it.toRound(strategy).calculateScore()

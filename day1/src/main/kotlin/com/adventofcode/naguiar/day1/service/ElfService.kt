@@ -2,7 +2,7 @@ package com.adventofcode.naguiar.day1.service
 
 import com.adventofcode.naguiar.day1.domain.Elf
 import com.adventofcode.naguiar.day1.domain.Snack
-import com.adventofcode.naguiar.readAsResourceStream
+import com.adventofcode.naguiar.readResourceAsStream
 
 class ElfService(inputPath: String) {
 
@@ -16,7 +16,7 @@ class ElfService(inputPath: String) {
 
     private fun parseElfSnacks(inputPath: String): List<Elf> {
         var currentId = 1L
-        return inputPath.readAsResourceStream().lineSequence()
+        return inputPath.readResourceAsStream().lineSequence()
             .mapNotNull {
                 if (it.isBlank()) {
                     currentId++

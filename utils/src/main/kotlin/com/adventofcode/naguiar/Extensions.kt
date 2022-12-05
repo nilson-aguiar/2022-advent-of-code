@@ -1,7 +1,10 @@
 package com.adventofcode.naguiar
 
+fun String.readResourceAsText() =
+    {}::class.java.getResource("/$this")?.readText()
+        ?: throw IllegalArgumentException("Invalid Path [$this]")
 
-fun String.readAsResourceStream() =
+fun String.readResourceAsStream() =
     {}::class.java.getResourceAsStream("/$this")?.bufferedReader()
         ?: throw IllegalArgumentException("Invalid Path [$this]")
 
